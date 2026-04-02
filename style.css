@@ -584,3 +584,27 @@ body {
 @media (max-width: 480px) {
   .reels-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== REEL TIPS LIST ===== */
+.reel-tips {
+  list-style: none;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--paper-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.reel-tips li {
+  font-size: 0.75rem;
+  color: var(--ink-mid);
+  line-height: 1.4;
+  display: flex;
+  gap: 0.4rem;
+}
+.reel-tips li::before {
+  content: '›';
+  color: var(--red);
+  font-weight: 700;
+  flex-shrink: 0;
+}
