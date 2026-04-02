@@ -484,3 +484,103 @@ body {
   .book-table th, .book-table td { padding: 0.6rem 0.6rem; }
 }
 </style>
+
+/* ===== REELS PAGE ===== */
+.reel-city-group { margin-bottom: 2rem; }
+
+.reel-card {
+  background: var(--white);
+  border: 1px solid var(--paper-border);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.reel-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-color: var(--red-mid);
+}
+.reel-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.reel-info { flex: 1; min-width: 0; }
+.reel-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+.reel-desc {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.reel-meta {
+  display: flex;
+  gap: 6px;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+.reel-lang {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: var(--paper-dark);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.reel-arrow {
+  color: var(--red);
+  font-size: 1rem;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* Reels section inside day pages */
+.reels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+.reel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(131,58,180,0.08), rgba(253,29,29,0.06));
+  border: 1px solid rgba(131,58,180,0.2);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+.reel-btn:hover {
+  background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));
+  border-color: rgba(131,58,180,0.4);
+}
+.reel-btn .licon { font-size: 1rem; }
+.reel-btn .ltxt { line-height: 1.2; }
+.reel-btn .lsub { font-size: 0.68rem; color: var(--ink-soft); font-weight: 400; display: block; }
+
+@media (max-width: 480px) {
+  .reels-grid { grid-template-columns: 1fr; }
+}
